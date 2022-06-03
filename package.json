@@ -1,0 +1,14 @@
+{
+  "name": "hyper-html-log",
+  "version": "0.0.1",
+  "license": "MIT",
+  "keywords": [
+    "hyper",
+    "hyper.app",
+    "hyper-plugin"
+  ],
+  "description": "Extension to log Hyper sessions to an HTML file",
+  "dependencies": {
+    "@electron/remote": "^2.0.1"
+  }
+}
