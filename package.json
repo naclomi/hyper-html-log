@@ -1,13 +1,20 @@
 {
   "name": "hyper-html-log",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "keywords": [
     "hyper",
     "hyper.app",
     "hyper-plugin"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naclomi/hyper-html-log"
+  },
   "description": "Extension to log Hyper sessions to an HTML file",
+  "author": "nacl",
+  "license": "MIT",
+  "homepage": "https://github.com/naclomi/hyper-html-log#readme",
   "dependencies": {
     "@electron/remote": "^2.0.1"
   }

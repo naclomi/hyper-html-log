@@ -1,10 +1,15 @@
 # hyper-html-log
 
-Record the output of terminal sessions to a static, standalone HTML file that can be viewed in a web browser. The intent of this plugin is to aid instructors when teaching classes how to use UNIX terminals (eg, in Software Carpentries classes), and it is developed as a component of the `livecode-streamer` project.
+Plugin for the [`hyper` terminal emulator](https://hyper.is/) to record the output of terminal sessions to a static, standalone HTML file which can be viewed in a web browser. The intent of this plugin is to aid instructors when teaching classes how to use UNIX terminals (eg, in Software Carpentries classes), and it is developed as a component of the [`livecode-streamer` project](https://pypi.org/project/livecode-streamer/).
 
 ## Usage
 
 Open the hamburger menu and check `Log to HTML`, which will present a file picker to choose the output location. The log will be updated whenever you hit the return key. To stop logging, select `Log to HTML` again to uncheck it.
+
+## Installation
+
+Run the following command:
+`hyper i hyper-html-log`
 
 ## Caveats
 
