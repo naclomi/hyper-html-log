@@ -6,7 +6,7 @@ exports.middleware = (store) => (next) => (action) => {
   if ('SESSION_USER_DATA' === action.type) {
     if (state.ui.htmlLogFiles && state.ui.htmlLogFiles[state.ui.activeUid] !== undefined) {
       if (action.data.endsWith("\n") || action.data.endsWith("\r")) {
-        setInterval(()=>{
+        setTimeout(()=>{
           store.dispatch({
             type: 'HTML_LOGGER_DUMP',
             uid: state.ui.activeUid
@@ -78,9 +78,20 @@ exports.onWindow = (window) => {
 }
 
 exports.decorateMenu = (menu) =>  {
-    return menu.concat([
-      {type: 'separator'},
-      {label: 'Log to HTML',
+    return menu.map(menuItem => {
+      if (menuItem.label !== 'Tools') {
+        return menuItem;
+      }
+
+      const newMenuItem = Object.assign({}, menuItem);
+      newMenuItem.submenu = [...newMenuItem.submenu];
+
+      newMenuItem.submenu.push({
+        type: 'separator'
+      });
+
+      newMenuItem.submenu.push({
+        label: 'Log to HTML',
         type: 'checkbox',
         click: (item, window, event) => {
           if (item.checked === true) {
@@ -100,8 +111,10 @@ exports.decorateMenu = (menu) =>  {
             window.rpc.emit('HTML_LOGGER_STOP');
             item.checked = false;
           }
-      }}
-    ]);
+      }});
+
+      return newMenuItem;
+    });
 }
 
 

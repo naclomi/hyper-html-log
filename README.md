@@ -4,7 +4,7 @@ Plugin for the [`hyper` terminal emulator](https://hyper.is/) to record the outp
 
 ## Usage
 
-Open the hamburger menu and check `Log to HTML`, which will present a file picker to choose the output location. The log will be updated whenever you hit the return key. To stop logging, select `Log to HTML` again to uncheck it.
+Open the `Tools` menu (from the hamburger in Windows/Linux and from the top bar in MacOS) and check `Log to HTML`, which will present a file picker to choose the output location. The log will be updated whenever you hit the return key. To stop logging, select `Log to HTML` again to uncheck it.
 
 ## Installation
 
@@ -15,9 +15,15 @@ Run the following command:
 
 This plugin deliberately does not include content in the log printed while the terminal is in raw mode (eg, in an interactive application like `nano` or `less`), as it is unclear exactly how these scenarios should be presented in a static format.
 
-## Road map and contributions
+## Change log, roadmap, contributions
 
 Pull requests welcome :) 
+
+Change log:
+
+- v0.0.3: Bug fixes, move logging option to 'Tools' menu to accomodate MacOS UI
+- v0.0.2: First public release
+
 
 Feature wish list:
 
